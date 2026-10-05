@@ -1,70 +1,78 @@
 # vibe-arcade
 
-Плагин для Claude Code: пока Claude работает, рядом с перепиской открывается
-игра. Когда он закончил или ждёт вашего ответа — панель закрывается сама.
+English · [Русский](README.ru.md)
 
-Три игры:
+A Claude Code plugin that opens a game beside the transcript while Claude
+works, and closes it by itself when Claude is done or needs your answer.
 
-- **Блоки** — падающие фигуры, собираете ряды. Между открытиями игра стоит на
-  паузе и продолжается с того же места.
-- **Tokensurfers** — забег по трём путям за токенами: ящик перепрыгиваете, под
-  балкой проезжаете подкатом, стену обходите. Токены копятся в кошельке.
-- **Змейка** — поле со стенами, яблоки, скорость растёт с длиной.
+![Blocks in a Claude Code pane](docs/blocks.png)
 
-Игры нарисованы цветными символами, поэтому идут в любом терминале и на любой
-системе: ничего не скачивается, сервера нет, наружу ничего не отправляется.
+Three games:
 
-## Установка
+- **Blocks** — falling pieces, clear the rows. The game pauses while the pane
+  is closed and carries on from where you left it.
+- **Tokensurfers** — a run down three tracks after tokens: jump the crate,
+  slide under the beam, go around the wall. Tokens add up in a wallet.
+- **Snake** — a walled field, apples, and a snake that speeds up as it grows.
 
-В Claude Code:
+The games are drawn with colored characters, so they run in any terminal on
+any system: nothing is downloaded, there is no server, and nothing is sent
+anywhere.
+
+The text inside the games is in Russian; the keys are the same on any layout.
+
+## Install
+
+In Claude Code:
 
 ```
 /plugin marketplace add IulaiJedi/vibe-arcade
 /plugin install vibe-arcade@vibe-arcade
 ```
 
-Нужен Claude Code 2.1.287 или новее.
+Requires Claude Code 2.1.287 or later.
 
-## Как пользоваться
+## Usage
 
-| Команда | Что делает |
+| Command | What it does |
 | :- | :- |
-| `/blocks` | включает плагин и открывает Блоки |
-| `/tokensurfers` | включает плагин и открывает Tokensurfers |
-| `/snake` | включает плагин и открывает Змейку |
-| любая из них с `off` | выключает плагин |
+| `/blocks` | turns the plugin on and opens Blocks |
+| `/tokensurfers` | turns the plugin on and opens Tokensurfers |
+| `/snake` | turns the plugin on and opens Snake |
+| any of them with `off` | turns the plugin off |
 
-Включённый, он сам открывает панель, когда Claude работает дольше 10 секунд, —
-с той игрой, которую вы звали последней. Когда Claude закончил, идёт отсчёт
-3-2-1 и панель закрывается. Если ему нужен ваш ответ (разрешение, вопрос),
-панель закрывается сразу и возвращается после ответа.
+Once on, it opens the pane by itself when Claude has been working for more
+than 10 seconds, with the game you asked for last. When Claude finishes there
+is a 3-2-1 countdown and the pane closes. If Claude needs you, say for a
+permission prompt or a question, the pane closes at once and comes back after
+you answer.
 
-В узком терминале панель сама не открывается: над строкой ввода появляется
-предложение — нажмите `1`.
+In a narrow terminal the pane does not open by itself: a line above the prompt
+offers it instead — press `1`.
 
-## Клавиши
+## Controls
 
-Буквы работают сразу, как панель открылась, в латинской и русской раскладке.
+Letters work as soon as the pane opens, on a Latin or a Russian layout.
 
-| | Блоки | Tokensurfers | Змейка |
+| | Blocks | Tokensurfers | Snake |
 | :- | :- | :- | :- |
-| `a`, `d` (`ф`, `в`) | влево, вправо | сменить путь | влево, вправо |
-| `w` (`ц`) | поворот | прыжок | вверх |
-| `s` (`ы`) | вниз | подкат | вниз |
-| пробел, Enter | сброс | прыжок | новая игра |
-| `r` (`к`) | новая игра | — | новая игра |
+| `a`, `d` | left, right | change track | left, right |
+| `w` | rotate | jump | up |
+| `s` | down | slide | down |
+| space, Enter | drop | jump | new game |
+| `r` | new game | — | new game |
 
-Стрелки работают после клика мышью по самой картинке. Клик в любое другое
-место панели возвращает клавиши буквам. `Esc` возвращает к строке ввода.
+Arrow keys work after you click the picture itself. A click anywhere else in
+the pane gives the keys back to the letters. `Esc` returns to the prompt.
 
-## Автор
+## Author
 
 [jedicoder.store](https://jedicoder.store) ·
 [Telegram](https://t.me/vibecodejedi) ·
 [GitHub](https://github.com/IulaiJedi) ·
 [Instagram](https://www.instagram.com/iulaijedi/)
 
-## Лицензия
+## License
 
-MIT. Порядок «открыть — отсчёт — вернуть» перенесён из
+MIT. The open, count down and hand back flow is adapted from
 [intermission](https://github.com/jarrodwatts/intermission) (MIT, Jarrod Watts).
