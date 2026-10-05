@@ -1,0 +1,6 @@
+{
+  "name": "vibe-arcade",
+  "description": "Три игры в панели Claude Code, пока Claude работает",
+  "owner": { "name": "IulaiJedi" },
+  "plugins": [{ "name": "vibe-arcade", "source": "./" }]
+}

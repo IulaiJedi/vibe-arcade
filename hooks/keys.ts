@@ -1,0 +1,65 @@
+// Which key plays which move in each game, for the letters typed into the
+// pane's field and for the keys pressed over the picture alike. Each letter is
+// there twice: as typed in a Latin layout and in a Russian one.
+
+export const KEY_ACTIONS: Record<string, string> = {
+  left: 'left',
+  right: 'right',
+  up: 'rotate',
+  down: 'down',
+  ' ': 'drop',
+  space: 'drop',
+  return: 'drop',
+  a: 'left',
+  d: 'right',
+  w: 'rotate',
+  s: 'down',
+  f: 'drop',
+  r: 'new',
+  ф: 'left',
+  в: 'right',
+  ц: 'rotate',
+  ы: 'down',
+  а: 'drop',
+  к: 'new',
+}
+
+export const RUN_KEYS: Record<string, string> = {
+  left: 'left',
+  right: 'right',
+  up: 'jump',
+  down: 'slide',
+  ' ': 'jump',
+  space: 'jump',
+  return: 'jump',
+  a: 'left',
+  d: 'right',
+  w: 'jump',
+  s: 'slide',
+  r: 'new',
+  ф: 'left',
+  в: 'right',
+  ц: 'jump',
+  ы: 'slide',
+  к: 'new',
+}
+
+export const SNAKE_KEYS: Record<string, string> = {
+  left: 'left',
+  right: 'right',
+  up: 'up',
+  down: 'down',
+  a: 'left',
+  d: 'right',
+  w: 'up',
+  s: 'down',
+  r: 'new',
+  ' ': 'new',
+  space: 'new',
+  return: 'new',
+  ф: 'left',
+  в: 'right',
+  ц: 'up',
+  ы: 'down',
+  к: 'new',
+}
